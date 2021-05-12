@@ -1,0 +1,17 @@
+* {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.home {
+  position: relative;
+  background-image: url("./static/images/pexels-katerina-holmes-5905700.jpg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 36px;
+}
