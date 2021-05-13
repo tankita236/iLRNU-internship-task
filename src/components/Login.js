@@ -16,7 +16,7 @@ export function Login({
     return (
         <div className="flex items-center content-center justify-center w-full h-full">
             <form className="absolute px-6 pt-4 pb-2 text-center bg-white border rounded-2xl shadow-md sm:w-1/2 lg:w-1/3">
-                <div className="flex justify-end" onClick={closeLoginModal}>
+                <div className="flex justify-end cursor-pointer" onClick={closeLoginModal}>
                     <img alt="Close" src={CloseIcon} />
                 </div>
                 <h3 className="text-center text-lg font-semibold mb-4">Login</h3>

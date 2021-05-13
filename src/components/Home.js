@@ -18,7 +18,7 @@ export function Home({
     ];
 
     if(userLoggedIn) {
-        dropDownListItems[0] = {name: 'Login'}
+        dropDownListItems[0] = {name: 'Log in'}
     }
     
     function handleLoginClick() {
@@ -36,7 +36,7 @@ export function Home({
             userLoggedIn,
             handleProfileClick
         }}>
-            <div className="home">
+            <div className="relative w-screen h-screen px-2 pt-3 bg-landing-image bg-center bg-no-repeat bg-cover">
                 <Header />
                 {dropDownOpen ? <DropDown dropDownListItems={dropDownListItems}/> : null}
                 {loginOpen ? <Login closeLoginModal={closeLoginModal}/>: null}

@@ -1,4 +1,4 @@
-import BrandLogo from '../static/images/Rectangle1.svg';
+import BrandLogo from '../static/images/logo.png';
 
 export function Logo() {
     return (
