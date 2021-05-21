@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { DropDown } from './Dropdown';
 import { Login } from './Login';
 
-export const HomeContext =  React.createContext()
+export const HomeContext = React.createContext()
 export function Home({
     userLoggedIn
 }) {
@@ -11,21 +11,21 @@ export function Home({
     const [loginOpen, setLoginOpen] = React.useState(false);
 
     const dropDownListItems = [
-        {name:'Log in', handleClick: handleLoginClick}, 
-        {name:'Sign up'},
-        {name:'How online Tutoring works'},
-        {name:'Help center'}
+        { name: 'Log in', handleClick: handleLoginClick },
+        { name: 'Sign up' },
+        { name: 'How online Tutoring works' },
+        { name: 'Help center' }
     ];
 
-    if(userLoggedIn) {
-        dropDownListItems[0] = {name: 'Log in'}
+    if (userLoggedIn) {
+        dropDownListItems[0] = { name: 'Log in' }
     }
-    
+
     function handleLoginClick() {
         setLoginOpen(loginOpen => !loginOpen);
         setDropDownOpen(false);
     }
-    function handleProfileClick () {
+    function handleProfileClick() {
         setDropDownOpen(dropDownOpen => !dropDownOpen);
     }
     function closeLoginModal() {
@@ -36,10 +36,10 @@ export function Home({
             userLoggedIn,
             handleProfileClick
         }}>
-            <div className="relative w-screen h-screen px-2 pt-3 bg-landing-image bg-center bg-no-repeat bg-cover">
+            <div className="relative w-full h-72 md:h-screen px-2 pt-3 bg-landing-image bg-center bg-no-repeat bg-cover overflow-hidden mb-4">
                 <Header />
-                {dropDownOpen ? <DropDown dropDownListItems={dropDownListItems}/> : null}
-                {loginOpen ? <Login closeLoginModal={closeLoginModal}/>: null}
+                {dropDownOpen ? <DropDown dropDownListItems={dropDownListItems} /> : null}
+                {loginOpen ? <Login closeLoginModal={closeLoginModal} /> : null}
             </div>
         </HomeContext.Provider>
     )
