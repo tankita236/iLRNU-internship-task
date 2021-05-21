@@ -28,7 +28,7 @@ export function Login({
                         Login
                     </button>
                 </Link>
-                <div className="w-full p-2 mb-3 text-white font-medium text-blue-900 rounded-xl border-2 border-blue-900">
+                <div className="w-full p-2 mb-3 font-medium text-blue-900 rounded-xl border-2 border-blue-900">
                     Login with gmail
                 </div>
                 <p className="text-center my-4">Not a member of iLRNU? <Link to="/loggedin-home-page" className="text-sm font-semibold text-blue-900 cursor-pointer">Sign Up</Link></p>
